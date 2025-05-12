@@ -1,0 +1,36 @@
+/* ====== Reset & globals ====== */
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: "Inter", system-ui, sans-serif; color: #1e293b; background: #f8fafc; }
+
+/* ====== Hero ====== */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem 3rem;
+  background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
+  color: #fff;
+}
+.hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin: 0; }
+.tagline { margin-top: .5rem; opacity: .85; font-weight: 600; }
+
+/* ====== Gallery grid ====== */
+.gallery {
+  --gap: 1.5rem;
+  display: grid;
+  gap: var(--gap);
+  padding: 3rem 1rem 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.gallery figure { margin: 0; transition: transform .2s ease, box-shadow .2s ease; border-radius: .5rem; overflow: hidden; background: #fff; }
+.gallery img { width: 100%; display: block; }
+.gallery figcaption { padding: 1rem .75rem; font-size: .925rem; line-height: 1.4; }
+
+.gallery figure:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,.12);
+}
+
+/* ====== Footer ====== */
+footer { text-align: center; padding: 2rem 1rem; font-size: .875rem; color: #475569; }
